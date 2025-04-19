@@ -2,7 +2,7 @@
 slug: aboutMe
 title: 关于我
 authors: [zwz6666]
-tags: []
+tags: [luogu]
 ---
 
 # 置顶
@@ -10,7 +10,7 @@ tags: []
 - 本人在CSP-S考场上因T2答案未归零，而喜提[三等奖](https://oier.baoshuo.dev/oier/179070)，望周知。~~虽然清零了也只有二等~~
 - ~~2024年12月9日我首次红了！！~~
 - 然后又黄了，估计马上就绿了。
-
+<!-- truncate -->
 ---
 
 ## [个人主页1](https://zwz.rth1.xyz/) | [$\red{个人主页2（WordPress网站）}$](https://zwz.42web.io/wordpress/)

@@ -85,6 +85,15 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'robots',
+        content: 'noindex, nofollow',//阻止搜索引擎检索
+      },
+    },
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -184,6 +193,27 @@ const config = {
         }
       ]
     }),
+    markdown: {
+      format: 'detect',
+      mermaid: true,
+      preprocessor: ({filePath, fileContent}) => {
+        return fileContent.replaceAll('{{MY_VAR}}', 'MY_VALUE');
+      },
+      parseFrontMatter: async (params) => {
+        const result = await params.defaultParseFrontMatter(params);
+        result.frontMatter.description =
+          result.frontMatter.description?.replaceAll('{{MY_VAR}}', 'MY_VALUE');
+        return result;
+      },
+      mdx1Compat: {
+        comments: true,
+        admonitions: true,
+        headingIds: true,
+      },
+      anchors: {
+        maintainCase: true,
+      },
+    },
 };
 
 export default config;
