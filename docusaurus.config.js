@@ -69,6 +69,8 @@ const config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          blogSidebarTitle: 'All posts', // 侧边栏标题
+          blogSidebarCount: 'ALL', // 显示所有文章
         },
         theme: {
           customCss: './src/css/custom.css',
