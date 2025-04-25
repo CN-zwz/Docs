@@ -4,42 +4,60 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '动态博客',
+    Img: require('@site/static/img/WordPress-1.webp').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        基于WordPress的动态博客，部署在国外的免费服务器上。
+        <br />
+        目前开放用户注册，可使用邮箱。
+        <div className={styles.buttonContainer}>
+          <a className={styles.button} href="https://zhongwz.top/wordpress" target="_blank" rel="noreferrer">点击访问</a>
+        </div>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '框架式动态博客',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        基于Docusaurus的框架式动态博客，使用Markdown等语法编写文章。
+        源代码存储在<a href='https://github.com/CN-zwz/Docs'>Github的仓库</a>上。
+        <br />
+        <div className={styles.buttonContainer}>
+          <a className={styles.button} href="https://docs.zhongwz.top" target="_blank" rel="noreferrer">点击访问</a>
+        </div>
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '传统html静态博客',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        使用纯html和css编写的静态博客，托管在热铁盒网页托管平台上。
+        <br />
+        部分文章使用Markdown语法编写。
+        现已停止维护。
+        <br />
+        <div className={styles.buttonContainer}>
+          <a className={styles.button} href="https://i.zhongwz.top" target="_blank" rel="noreferrer">点击访问</a>
+        </div>
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Img, Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {Img ? (
+          <img src={Img} alt={title} className={styles.featureSvg} /> // 如果有 Img，则使用 <img> 渲染
+        ) : (
+          <Svg className={styles.featureSvg} role="img" /> // 否则使用 Svg 渲染
+        )}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
