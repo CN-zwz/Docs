@@ -1,0 +1,85 @@
+---
+slug: '/updataLog'
+---
+# 更新日志
+
+:::tip[说明]
+本页面记录了本站的更新日志，包含了网站的版本号、更新时间、更新内容等信息。
+由于技术原因，我无法预测 GitHub 的提交记录链接，所以所有的提交记录链接均为后续更新时添加，后续或许会考虑使用一些其他技术手段，但短期内不会实现。
+
+同时，“涉及网址”从 2025年5月开始不再列出。
+
+如果你在使用过程中发现了任何问题，欢迎通过 [GitHub Issues](https://github.com/CN-zwz/Docs/issues) 提交问题。
+当然，这要魔法。你也可以在 [WordPress](https://zhongwz.top) 上发表评论，或通过页脚的联系方式、社交媒体等联系我。
+:::
+
+## 2025年4月25日
+
+### 首页新增相关站点的介绍
+
+*涉及网址：[`/`](/)*
+
+新增具体内容如下
+
+- 动态博客，基于 WordPress，支持用户注册并部署在国外免费服务器上。
+- 框架式动态博客，基于 Docusaurus，支持 Markdown 编写文章，源代码托管在 GitHub。
+- 传统 HTML 静态博客，使用纯 HTML 和 CSS 编写，托管在热铁盒网页托管平台上。
+
+原始内容遂移除。
+
+### 文档中增加更新日志
+
+*涉及网址：[`/docs/updataLog`](/docs/updataLog)*
+
+## 2025年4月20日
+
+> 更新大事记和关于我的页面，添加原始链接和未列出标记；调整侧边栏格式，移除博客侧边栏配置，具体变更请参考 [提交记录][d297167]。
+
+[d297167]:https://github.com/CN-zwz/Docs/commit/d297167bc81d4fa1d8dee8a9bcb4d9351c759ab7
+
+## 2025年4月19日
+
+### 网站上线
+
+- 使用 VS Code将网站文件保存在GitHub上，并基于 Github Actions&Github Pages 将网站部署上线。
+- 增加和修改多篇文章。包括[本日日记](/blog/2025/4/19/)。
+- 修复网站问题，如无效URl导致的部署出错。
+- 修改网站配置，现在的站点标题等均是我自己的了。
+
+## 2025年4月30日
+
+## 更改页脚，增加访问域名提示
+本次更新启用了 Footer 组件，增加了访问域名提示。
+原理就是在页脚插入一个 `<div>`，然后通过 JavaScript 判断当前访问的域名，来显示不同的提示信息。
+
+具体提示见 ```FooterDomainText.js```：[github](https://github.com/CN-zwz/Docs/blob/master/src/components/FooterDomainText.js)或[jsdelivr](https://cdn.jsdelivr.net/gh/CN-zwz/Docs@master/src/components/FooterDomainText.js)。
+
+## 2025年5月1日
+
+版本号： v1.1.2（小版本更新）
+
+### 全面启用备用站
+
+当前备用站共 3 个，两个对外提供服务。
+详细见本次新增的[网址列表](/docs/list)。
+
+本次更新时的为：
+主站：
+- docs.zhongwz.top: 托管于 GitHub。（版本最新，但是国内访问不稳定）
+
+备用站列表：
+
+- docs2.zhongwz.top: 备用一站，托管于 CloudFlare Pages。（理论上与 Github同步，访问相对稳定）
+- docs3.zhongwz.top: 备用二站，托管于 阿里云OSS，新加坡地域。（版本最落后，且更新随缘，访问稳定。毕竟这是真的可能会扣钱的啊）（2025.5.1：暂时暂停服务）
+- docs4.zhongwz.top: 备用三站，托管于 热铁盒网页托管，服务器也在国外。（理论上与 Github同步，访问相对稳定）
+
+### 其他更新
+
+1. 增加[网址列表](/docs/list)，罗列了我的几乎所有站点，不定期更新，不一定最新。
+2. 更新日志改为 MDX 格式，方便后续更新，增强可扩展性。
+3. 更新页脚js。
+4. 增加部署到热铁盒的工作流 job。
+5. 首页增加一个按钮，指向网站列表。
+6. 其他一些小更新。
+
+一时想不起别的了。
