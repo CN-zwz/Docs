@@ -1,19 +1,38 @@
 hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+  label: 'Hello'
+  permalink: '/hello'
+  description: 'Hello tag description'
 
 docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+  label: 'Docusaurus'
+  permalink: '/docusaurus'
+  description: 'Docusaurus tag description'
 
 luogu:
-  label: Luogu
-  permalink: /Luogu-tag
-  description: 洛谷文章标签，与洛谷有关的文章或者是从洛谷搬过来的一般都会加上这个标签。
+  label: '洛谷'
+  permalink: '/Luogu-tag'
+  description: '洛谷文章标签，与洛谷有关的文章或者是从洛谷搬过来的一般都会加上这个标签。'
 
 solution:
-  label: solution
-  permalink: /solution
-  description: 题解，主要是洛谷上的。
+  label: '题解'
+  permalink: '/solution'
+  description: '题解，主要是洛谷上的。'
+
+other:
+  label: '其他'
+  permalink: '/other'
+  description: '其他，主要是一些杂七杂八的东西，日记一般不在此范围中。'
+
+banzi:
+  label: '板子'
+  permalink: '/banzi'
+  description: '班子，主要是一些班级活动的记录。'
+2025:
+  label: '2025'
+  permalink: '/2025'
+  description: '2025年的日记。'
+
+日记:
+  label: '日记'
+  permalink: '/diary'
+  description: '日记，主要是生活上的一些琐事。会发表自己的一些见解啊、想法啊什么的，基本上都是一些杂七杂八的东西，想到什么写什么。但也是最重要的内容。'

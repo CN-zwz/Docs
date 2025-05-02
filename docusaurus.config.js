@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
@@ -52,6 +52,9 @@ const config = {
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: true,
+          includeCurrentVersion: true,
         },
         blog: {
           remarkPlugins: [remarkMath],
@@ -71,6 +74,8 @@ const config = {
           onUntruncatedBlogPosts: 'warn',
           blogSidebarTitle: 'All posts', // 侧边栏标题
           blogSidebarCount: 'ALL', // 显示所有文章
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -115,12 +120,12 @@ const config = {
             position: 'left',
             label: '文档',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/CN-zwz',
             label: 'GitHub',
             position: 'right',
-          },{
+          }, {
             href: 'https://luogu.com.cn/user/1053876',
             label: 'Luogu',
             position: 'right',
@@ -162,7 +167,7 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/CN-zwz',
-              },{
+              }, {
                 label: 'WordPress博客',
                 href: 'https://zhongwz.top/wordpress'
               }
@@ -176,7 +181,7 @@ const config = {
                 href: 'mailto:zhong@zhongwz.top'
               },
             ]
-            
+
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} 钟<br> Built with Docusaurus.`,
@@ -198,27 +203,27 @@ const config = {
         strict: false, // 关闭严格模式
       },
     }),
-    markdown: {
-      format: 'detect',
-      mermaid: true,
-      preprocessor: ({filePath, fileContent}) => {
-        return fileContent.replaceAll('{{MY_VAR}}', 'MY_VALUE');
-      },
-      parseFrontMatter: async (params) => {
-        const result = await params.defaultParseFrontMatter(params);
-        result.frontMatter.description =
-          result.frontMatter.description?.replaceAll('{{MY_VAR}}', 'MY_VALUE');
-        return result;
-      },
-      mdx1Compat: {
-        comments: true,
-        admonitions: true,
-        headingIds: true,
-      },
-      anchors: {
-        maintainCase: true,
-      },
+  markdown: {
+    format: 'detect',
+    mermaid: true,
+    preprocessor: ({ filePath, fileContent }) => {
+      return fileContent.replaceAll('{{MY_VAR}}', 'MY_VALUE');
     },
+    parseFrontMatter: async (params) => {
+      const result = await params.defaultParseFrontMatter(params);
+      result.frontMatter.description =
+        result.frontMatter.description?.replaceAll('{{MY_VAR}}', 'MY_VALUE');
+      return result;
+    },
+    mdx1Compat: {
+      comments: true,
+      admonitions: true,
+      headingIds: true,
+    },
+    anchors: {
+      maintainCase: true,
+    },
+  },
 };
 
 export default config;

@@ -23,6 +23,14 @@ slug: '/list'
 - [docs4.zhongwz.top](https://docs4.zhongwz.top):  
     备用三站，托管于 热铁盒网页托管，服务器也在国外。（理论上与 Github同步，访问相对稳定）
 
+*快速链接（测试功能）*：
+
+访问[此网站](https://doc.zhongwz.top)以使用，这将会测试连接，并自动跳转到速度最快的网站（主站和启用的备用站）的首页。
+
+实现原理：通过 JavaScript 尝试发送请求到每个站点，获取响应时间，然后将响应时间最短的站点作为跳转目标。缓存有效期一个小时。
+
+然而尴尬的是，这个网站也是部署在 Cloudflare Pages 上的，所以没什么用。我这边测试一般都是 Cloudflare 的最快。（感谢赛博大善人！）
+
 ## 其他博客站点
 - [zhongwz.top](https://zhongwz.top):  
     动态博客，基于 WordPress，支持用户注册并部署在国外免费服务器上，底层为 php 实现。
