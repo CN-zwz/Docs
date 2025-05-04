@@ -92,15 +92,15 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
-  headTags: [
-    {
-      tagName: 'meta',
-      attributes: {
-        name: 'robots',
-        content: 'noindex, nofollow',//阻止搜索引擎检索
-      },
-    },
-  ],
+  // headTags: [
+  //   {
+  //     tagName: 'meta',
+  //     attributes: {
+  //       name: 'robots',
+  //       content: 'noindex, nofollow',//阻止搜索引擎检索
+  //     },
+  //   },
+  // ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
