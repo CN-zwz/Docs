@@ -2,6 +2,7 @@
 date: 2024-10-16T18:13
 authors: [zwz6666]
 tags: [luogu,solution]
+slug: luogu/CF1141E
 ---
 
 # CF1141E Superhero Battle 题解

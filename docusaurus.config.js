@@ -46,7 +46,7 @@ const config = {
       ({
         docs: {
           remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          rehypePlugins: [[rehypeKatex, { strict: false }]],
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -58,7 +58,7 @@ const config = {
         },
         blog: {
           remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          rehypePlugins: [[rehypeKatex, { strict: false }]],
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -76,6 +76,7 @@ const config = {
           blogSidebarCount: 'ALL', // 显示所有文章
           showLastUpdateAuthor: false,
           showLastUpdateTime: true,
+
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -199,21 +200,15 @@ const config = {
           }
         }
       ],
-      math: {
-        strict: false, // 关闭严格模式
-      },
+      // katex: {
+      //   strict: 'ignore', // 忽略 LaTeX 兼容性警告
+      // },
     }),
   markdown: {
     format: 'detect',
     mermaid: true,
     preprocessor: ({ filePath, fileContent }) => {
       return fileContent.replaceAll('{{MY_VAR}}', 'MY_VALUE');
-    },
-    parseFrontMatter: async (params) => {
-      const result = await params.defaultParseFrontMatter(params);
-      result.frontMatter.description =
-        result.frontMatter.description?.replaceAll('{{MY_VAR}}', 'MY_VALUE');
-      return result;
     },
     mdx1Compat: {
       comments: true,
