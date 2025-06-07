@@ -58,3 +58,9 @@ rt，这个文章主要是写给自己看的，记叙一些杂七杂八的东西
    User-agent: *
    Disallow: /
    ```
+
+4. 部署到本地
+
+  ```powershell
+  npx docusaurus serve --build --host 192.168.0.205 --port 80
+  ```
