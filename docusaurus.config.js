@@ -226,6 +226,10 @@ const config = {
       'data-website-id': "dcbb2c7c-8338-4431-a4f7-c5e71f2a43be",
       //<script defer src="https://cloud.umami.is/script.js" data-website-id="dcbb2c7c-8338-4431-a4f7-c5e71f2a43be"></script>
     },
+    {
+      src: '/js/AES.js',
+      defer: true,
+    },
   ]
 };
 

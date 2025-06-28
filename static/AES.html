@@ -1,0 +1,52 @@
+<!-- 加密工具 - save as encryptor.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>内容加密工具</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        textarea, input { width: 100%; margin-bottom: 10px; }
+        button { padding: 8px 15px; background: #4CAF50; color: white; border: none; cursor: pointer; }
+        .output { background: #f5f5f5; padding: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>内容加密工具</h1>
+    
+    <div>
+        <h2>加密内容</h2>
+        <textarea id="plaintext" rows="5" placeholder="输入要加密的文本"></textarea>
+        <input type="text" id="encryptKey" placeholder="输入加密密钥（任意字符串）">
+        <input type="text" id="promptText" placeholder="输入无密钥时的提示文本（如：点击查看加密内容）">
+        <button onclick="encrypt()">生成加密HTML</button>
+        
+        <div class="output">
+            <h3>生成的HTML代码：</h3>
+            <textarea id="outputHtml" rows="5" readonly></textarea>
+            <p>复制上方代码到您的网页中需要加密内容的位置</p>
+        </div>
+    </div>
+
+    <script>
+        function encrypt() {
+            const plaintext = document.getElementById('plaintext').value;
+            const key = document.getElementById('encryptKey').value;
+            const promptText = document.getElementById('promptText').value || "点击查看加密内容";
+            
+            if (!plaintext || !key) {
+                alert('请输入文本和密钥');
+                return;
+            }
+            
+            // 使用CryptoJS进行AES加密
+            const encrypted = CryptoJS.AES.encrypt(plaintext, key).toString();
+            
+            // 生成HTML代码
+            const htmlCode = `<div class="encrypted-content" data-cipher="${encodeURIComponent(encrypted)}" data-prompt="${encodeURIComponent(promptText)}">${promptText}</div>`;
+            
+            document.getElementById('outputHtml').value = htmlCode;
+        }
+    </script>
+</body>
+</html>

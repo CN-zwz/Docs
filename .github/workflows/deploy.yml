@@ -49,17 +49,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  deployOnRTH:
-    runs-on: ubuntu-latest
-    container:
-      image: shangzheny/rth-host-helper:latest
+  # deployOnRTH:
+  #   runs-on: ubuntu-latest
+  #   container:
+  #     image: shangzheny/rth-host-helper:latest
 
-    steps:
-      - name: Deploy to Retinbox Web Hosting
-        uses: rthsoftware/host-auto-deploy@master
-        env:
-          RTH_API_KEY: ${{ secrets.RTH_API_KEY }}
-        with:
-          site: "docs4.zhongwz.top"
-          build: "build"
-          outdir: "build"
+  #   steps:
+  #     - name: Deploy to Retinbox Web Hosting
+  #       uses: rthsoftware/host-auto-deploy@master
+  #       env:
+  #         RTH_API_KEY: ${{ secrets.RTH_API_KEY }}
+  #       with:
+  #         site: "docs4.zhongwz.top"
+  #         build: "build"
+  #         outdir: "build"
