@@ -92,6 +92,10 @@ const config = {
         'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
       crossorigin: 'anonymous',
     },
+    {
+      href: 'https://unpkg.com/@waline/client@v3/dist/waline.css',
+      type: 'text/css',
+    },
   ],
   // headTags: [
   //   {
@@ -229,6 +233,11 @@ const config = {
     {
       src: '/js/AES.js',
       defer: true,
+    },
+    {
+      src: '/js/waline.js',
+      defer: true,
+      type: 'module'
     },
   ]
 };
