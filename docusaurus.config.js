@@ -239,7 +239,10 @@ const config = {
       defer: true,
       type: 'module'
     },
-  ]
+  ],
+  customFields: {
+    USE_SSH: true,
+  },
 };
 
 export default config;

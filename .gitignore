@@ -21,5 +21,4 @@ yarn-error.log*
 .env
 
 # other
-static/baidu_verify_codeva-*.html
-docs/思沁/*
+*.pem
