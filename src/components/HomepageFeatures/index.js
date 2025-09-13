@@ -10,7 +10,7 @@ const FeatureList = [
       <>
         基于WordPress的动态博客，部署在国外的免费服务器上。
         <br />
-        目前开放用户注册，可使用邮箱。
+        目前开放用户注册，可使用邮箱。但基本停止使用。
         <div className={styles.buttonContainer}>
           <a className={styles.button} href="https://zhongwz.top/wordpress" target="_blank" rel="noreferrer">点击访问</a>
         </div>
@@ -27,22 +27,6 @@ const FeatureList = [
         <br />
         <div className={styles.buttonContainer}>
           <a className={styles.button} href="https://docs.zhongwz.top" target="_blank" rel="noreferrer">点击访问</a>
-        </div>
-      </>
-    ),
-  },
-  {
-    title: '传统html静态博客',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        使用纯html和css编写的静态博客，托管在热铁盒网页托管平台上。
-        <br />
-        部分文章使用Markdown语法编写。
-        现已停止维护。
-        <br />
-        <div className={styles.buttonContainer}>
-          <a className={styles.button} href="https://i.zhongwz.top" target="_blank" rel="noreferrer">点击访问</a>
         </div>
       </>
     ),

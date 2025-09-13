@@ -36,3 +36,8 @@ banzi:
   label: '日记'
   permalink: '/diary'
   description: '日记，主要是生活上的一些琐事。会发表自己的一些见解啊、想法啊什么的，基本上都是一些杂七杂八的东西，想到什么写什么。但也是最重要的内容。'
+
+技术:
+  label: '技术'
+  permalink: '/technology'
+  description: '技术，主要是一些技术方面的文章，比如说编程、算法、工具使用等等。信息学的题解没有放在此分类中'
